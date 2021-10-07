@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Film</title>
+</head>
+<body>
+	<div class="container">
+		<form action="/save" th:object = ${film} method="POST">
+			<input type="text" placeholder="titre du film" th:field = ${film.titre}>
+			<textarea type="text" placeholder="Description du film:" th:field = ${film.description}></textarea>
+			<select th:field = ${film.actors}>
+				<option th:value="1">Sylvertre Felino</option>
+			</select>
+			<button type="submit">Creer film</button>
+		</form>	
+	</div>
+</body>
+</html>
